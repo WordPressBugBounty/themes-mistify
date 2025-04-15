@@ -6,13 +6,13 @@
 					<div class="position-relative wp-block-kubio-column__inner mistify-404__k__ebKDehgi0d-inner mistify-local-78-inner d-flex h-flex-basis h-px-lg-3 v-inner-lg-3 h-px-md-3 v-inner-md-3 h-px-3 v-inner-3">
 						<div class="position-relative wp-block-kubio-column__align mistify-404__k__ebKDehgi0d-align mistify-local-78-align h-y-container h-column__content h-column__v-align flex-basis-100 align-self-lg-start align-self-md-start align-self-start">
 							<h4 class="wp-block wp-block-kubio-heading  position-relative wp-block-kubio-heading__text mistify-404__k__CryHflZk8-text mistify-local-79-text" data-kubio="kubio/heading">
-								<?php esc_html_e('It looks like this page doesn\'t exist.', 'mistify'); ?>
+								<?php esc_html_e( 'It looks like this page doesn\'t exist.', 'mistify' ); ?>
 							</h4>
 							<div class="position-relative wp-block-kubio-home-button__ mistify-404__k__XE8iPl7Auw- mistify-local-80-">
 								<span class="wp-block wp-block-kubio-home-button  position-relative wp-block-kubio-home-button__outer mistify-404__k__XE8iPl7Auw-outer mistify-local-80-outer kubio-button-container" data-kubio="kubio/home-button">
-									<a class="position-relative wp-block-kubio-home-button__link mistify-404__k__XE8iPl7Auw-link mistify-local-80-link h-w-100 h-global-transition" href="<?php echo esc_url(home_url()); ?>">
+									<a class="position-relative wp-block-kubio-home-button__link mistify-404__k__XE8iPl7Auw-link mistify-local-80-link h-w-100 h-global-transition" href="<?php echo esc_url( home_url() ); ?>">
 										<span class="position-relative wp-block-kubio-home-button__text mistify-404__k__XE8iPl7Auw-text mistify-local-80-text kubio-inherit-typography">
-											<?php esc_html_e('Go to Homepage!', 'mistify'); ?>
+											<?php esc_html_e( 'Go to Homepage!', 'mistify' ); ?>
 										</span>
 									</a>
 								</span>

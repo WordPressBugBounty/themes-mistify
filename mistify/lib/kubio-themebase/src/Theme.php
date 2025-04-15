@@ -45,11 +45,11 @@ class Theme extends ThemeBase {
 			ob_start();
 
 			?>
-            <script>
+			<script>
 				jQuery(function ($) {
 					$(".mistify-admin-big-notice").show();
 				});
-            </script>
+			</script>
 			<?php
 			$script = strip_tags( ob_get_clean() );
 			wp_add_inline_script( 'jquery', $script );
@@ -62,10 +62,10 @@ class Theme extends ThemeBase {
 			return false;
 		}
 
-		$slug = get_template() . '-page-info';
-		$is_fresh_site = !$this->themeWasCustomized();
+		$slug          = get_template() . '-page-info';
+		$is_fresh_site = ! $this->themeWasCustomized();
 
-		if ( !$is_fresh_site ) {
+		if ( ! $is_fresh_site ) {
 			return false;
 		}
 
@@ -77,6 +77,9 @@ class Theme extends ThemeBase {
 			return false;
 		}
 
+		if ( Flags::get( 'with_starter_content', false ) ) {
+			return false;
+		}
 		if ( $pagenow === 'update.php' ) {
 			return false;
 		}
@@ -87,13 +90,13 @@ class Theme extends ThemeBase {
 	public function addThemeNotice() {
 		if ( $this->shouldDisplayAdminNotice() ) :
 			?>
-            <div class="notice notice-success is-dismissible mistify-admin-big-notice notice-large">
+			<div class="notice notice-success is-dismissible mistify-admin-big-notice notice-large">
 				<?php View::make( 'admin/admin-notice-frontpage' ); ?>
-            </div>
-            <script>
+			</div>
+			<script>
 
-            </script>
-		<?php
+			</script>
+			<?php
 		endif;
 	}
 
@@ -107,124 +110,124 @@ class Theme extends ThemeBase {
 		}
 
 		?>
-        <div class="kubio-onboarding kubio-step-1--active">
-            <div>
-                <!-- STEP 1 -->
-                <div class="kubio-onboarding__wrapper kubio-step-1">
-                    <div class="kubio-onboarding__wrapper__header">
-                        <div class="kubio-onboarding__dismiss">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x"
-                                 viewBox="0 0 16 16">
-                                <path
-                                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-                            </svg>
-                        </div>
-                        <h2> <?php echo Translations::get( 'themebase_step1_title' ); ?> </h2>
-                    </div>
+		<div class="kubio-onboarding kubio-step-1--active">
+			<div>
+				<!-- STEP 1 -->
+				<div class="kubio-onboarding__wrapper kubio-step-1">
+					<div class="kubio-onboarding__wrapper__header">
+						<div class="kubio-onboarding__dismiss">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x"
+								 viewBox="0 0 16 16">
+								<path
+										d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+							</svg>
+						</div>
+						<h2> <?php echo Translations::get( 'themebase_step1_title' ); ?> </h2>
+					</div>
 
-                    <div class="kubio-onboarding__wrapper__content">
-                        <label>
-                            <input type="radio" id="kubio-install-new-homepage" name="kubio-onboarding-action"
-                                   value="kubio-install-new-homepage" checked ai="true"></input>
-                            <div class="radio-card">
-                                <div class="radio-card__radio-checked">
+					<div class="kubio-onboarding__wrapper__content">
+						<label>
+							<input type="radio" id="kubio-install-new-homepage" name="kubio-onboarding-action"
+								   value="kubio-install-new-homepage" checked ai="true"></input>
+							<div class="radio-card">
+								<div class="radio-card__radio-checked">
 									<?php echo file_get_contents( mistify_theme()->getThemeResource( 'images/theme-base/check.svg' ) ); ?>
-                                    <div class="radio-card__radio-checked__background"></div>
-                                </div>
-                                <div class="radio-card__image-container">
-                                    <img src="<?php echo mistify_theme()->getThemeResource( 'images/theme-base/web-layout.png' ); ?>"
-                                         alt="web-layout" draggable="false">
-                                </div>
-                                <span>
+									<div class="radio-card__radio-checked__background"></div>
+								</div>
+								<div class="radio-card__image-container">
+									<img src="<?php echo mistify_theme()->getThemeResource( 'images/theme-base/web-layout.png' ); ?>"
+										 alt="web-layout" draggable="false">
+								</div>
+								<span>
 									<p><?php echo Translations::get( 'themebase_step1_option1_title' ); ?></p>
 									<p><?php echo Translations::get( 'themebase_step1_option1_subtitle' ); ?></p>
 								</span>
 
-                            </div>
-                        </label>
+							</div>
+						</label>
 
-                        <label>
-                            <input type="radio" id="kubio-keep-current-layout" name="kubio-onboarding-action"
-                                   value="kubio-keep-current-layout"></input>
-                            <div class="radio-card">
-                                <div class="radio-card__radio-checked">
+						<label>
+							<input type="radio" id="kubio-keep-current-layout" name="kubio-onboarding-action"
+								   value="kubio-keep-current-layout"></input>
+							<div class="radio-card">
+								<div class="radio-card__radio-checked">
 									<?php echo file_get_contents( mistify_theme()->getThemeResource( 'images/theme-base/check.svg' ) ); ?>
-                                    <div class="radio-card__radio-checked__background"></div>
-                                </div>
-                                <div class="radio-card__image-container">
-                                    <img src="<?php echo mistify_theme()->getThemeResource( 'images/theme-base/blog-layout.png' ); ?>"
-                                         alt="blog-layout" draggable="false">
-                                </div>
-                                <span>
+									<div class="radio-card__radio-checked__background"></div>
+								</div>
+								<div class="radio-card__image-container">
+									<img src="<?php echo mistify_theme()->getThemeResource( 'images/theme-base/blog-layout.png' ); ?>"
+										 alt="blog-layout" draggable="false">
+								</div>
+								<span>
 									<p><?php echo Translations::get( 'themebase_step2_option1_title' ); ?></p>
 									<p><?php echo Translations::get( 'themebase_step2_option1_subtitle' ); ?></p>
 								</span>
-                            </div>
-                        </label>
-                    </div>
+							</div>
+						</label>
+					</div>
 
-                    <div class="kubio-onboarding__wrapper__footer">
-                        <div>
-                            <button class="button button-primary button-hero" data-action="continue">
+					<div class="kubio-onboarding__wrapper__footer">
+						<div>
+							<button class="button button-primary button-hero" data-action="continue">
 								<?php echo Translations::get( 'continue' ); ?>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+							</button>
+						</div>
+					</div>
+				</div>
 
 
-                <!-- STEP 2 -->
-                <div class="kubio-onboarding__wrapper kubio-step-2">
-                    <div class="kubio-onboarding__wrapper__header">
-                        <div class="kubio-onboarding__dismiss">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x"
-                                 viewBox="0 0 16 16">
-                                <path
-                                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-                            </svg>
-                        </div>
-                        <h2><?php Translations::escHtmlE( 'themebase_step2_title' ); ?></h2>
-                    </div>
+				<!-- STEP 2 -->
+				<div class="kubio-onboarding__wrapper kubio-step-2">
+					<div class="kubio-onboarding__wrapper__header">
+						<div class="kubio-onboarding__dismiss">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x"
+								 viewBox="0 0 16 16">
+								<path
+										d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+							</svg>
+						</div>
+						<h2><?php Translations::escHtmlE( 'themebase_step2_title' ); ?></h2>
+					</div>
 
-                    <div class="kubio-onboarding__wrapper__content">
-                        <p><?php Translations::escHtmlE( 'theme_description', mistify_theme()->getName() ); ?></p>
+					<div class="kubio-onboarding__wrapper__content">
+						<p><?php Translations::escHtmlE( 'theme_description', mistify_theme()->getName() ); ?></p>
 
-                        <ul>
-                            <li>
+						<ul>
+							<li>
 								<?php echo file_get_contents( mistify_theme()->getThemeResource( 'images/theme-base/round-check.svg' ) ); ?>
 								<?php Translations::escHtmlE( 'benefit_1' ); ?>
-                            </li>
-                            <li>
+							</li>
+							<li>
 								<?php echo file_get_contents( mistify_theme()->getThemeResource( 'images/theme-base/round-check.svg' ) ); ?>
 								<?php Translations::escHtmlE( 'benefit_2' ); ?>
-                            </li>
-                            <li>
+							</li>
+							<li>
 								<?php echo file_get_contents( mistify_theme()->getThemeResource( 'images/theme-base/round-check.svg' ) ); ?>
 								<?php Translations::escHtmlE( 'benefit_3' ); ?>
-                            </li>
-                            <li>
+							</li>
+							<li>
 								<?php echo file_get_contents( mistify_theme()->getThemeResource( 'images/theme-base/round-check.svg' ) ); ?>
 								<?php Translations::escHtmlE( 'benefit_4' ); ?>
-                            </li>
-                        </ul>
+							</li>
+						</ul>
 
-                        <div class="kubio-onboarding__wrapper__content__buttons">
-                            <button class="button button-primary button-hero" data-action="generate">
+						<div class="kubio-onboarding__wrapper__content__buttons">
+							<button class="button button-primary button-hero" data-action="generate">
 								<?php Translations::escHtmlE( 'themebase_step2_button1' ); ?>
-                            </button>
-                            <button class="button-link button-hero" data-action="default">
+							</button>
+							<button class="button-link button-hero" data-action="default">
 								<?php Translations::escHtmlE( 'themebase_step2_button2' ); ?>
-                            </button>
-                        </div>
+							</button>
+						</div>
 
-                        <p><?php Translations::escHtmlE( 'themebase_step2_footer_info' ); ?></p>
+						<p><?php Translations::escHtmlE( 'themebase_step2_footer_info' ); ?></p>
 
-                    </div>
+					</div>
 
-                    <div class="kubio-onboarding__wrapper__footer"></div>
-                </div>
-            </div>
-        </div>
+					<div class="kubio-onboarding__wrapper__footer"></div>
+				</div>
+			</div>
+		</div>
 		<?php
 	}
 
@@ -241,12 +244,12 @@ class Theme extends ThemeBase {
 			'blog_post_thumb_placeholder_color',
 			'blog_show_post_thumb_placeholder',
 			'blog_posts_per_row',
-			'blog_enable_masonry'
+			'blog_enable_masonry',
 		);
 
 		foreach ( $default_keys as $default_key ) {
 			foreach ( $mods_keys as $mod_key ) {
-				if ( in_array( $mod_key, $default_blog_keys) || strpos( $mod_key, "{$default_key}." ) === 0 ) {
+				if ( in_array( $mod_key, $default_blog_keys, true ) || strpos( $mod_key, "{$default_key}." ) === 0 ) {
 					Flags::set( 'theme_customized', true );
 
 					return true;
@@ -271,7 +274,7 @@ class Theme extends ThemeBase {
 	}
 
 	public function getName() {
-		$slug = $this->getThemeSlug();
+		$slug  = $this->getThemeSlug();
 		$theme = $this->getTheme( $slug );
 
 		return $theme->get( 'Name' );

@@ -29,7 +29,7 @@
 				<div class="wp-block wp-block-kubio-column  position-relative wp-block-kubio-column__container mistify-header__k__vPVKm6K-swr-container mistify-local-671-container d-flex h-col-lg-auto h-col-md-auto h-col-auto" data-kubio="kubio/column">
 					<div class="position-relative wp-block-kubio-column__inner mistify-header__k__vPVKm6K-swr-inner mistify-local-671-inner d-flex h-flex-basis h-px-lg-2 v-inner-lg-2 h-px-md-2 v-inner-md-2 h-px-2 v-inner-2">
 						<div class="position-relative wp-block-kubio-column__align mistify-header__k__vPVKm6K-swr-align mistify-local-671-align h-y-container h-column__content h-column__v-align flex-basis-100 align-self-lg-center align-self-md-center align-self-center">
-							<?php mistify_theme()->get('inner-title')->render(); ?>
+							<?php mistify_theme()->get( 'inner-title' )->render(); ?>
 						</div>
 					</div>
 				</div>

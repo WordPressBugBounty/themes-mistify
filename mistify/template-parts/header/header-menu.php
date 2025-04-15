@@ -31,12 +31,16 @@
 											<div class="background-layer background-layer-media-container"></div>
 										</div>
 										<div class="position-relative wp-block-kubio-column__align mistify-header__k__8B-Ug7XRbJF-align mistify-local-662-align h-y-container h-column__content h-column__v-align flex-basis-100 align-self-lg-center align-self-md-center align-self-center">
-											<?php mistify_theme()->get('logo')->render(array (
-  'wrapper_class' => 'wp-block wp-block-kubio-logo position-relative wp-block-kubio-logo__container  kubio-logo-direction-row mistify-header__k__mWDQCvYx59F-container mistify-local--container',
-  'logo_image_class' => 'position-relative wp-block-kubio-logo__image  kubio-logo-image  mistify-header__k__mWDQCvYx59F-image mistify-local--image',
-  'alt_logo_image_class' => 'position-relative wp-block-kubio-logo__alternateImage kubio-logo-image kubio-alternate-logo-image   mistify-header__k__mWDQCvYx59F-alternateImage mistify-local--alternateImage',
-  'logo_text_class' => 'position-relative wp-block-kubio-logo__text  mistify-header__k__mWDQCvYx59F-text mistify-local--text',
-)); ?>
+											<?php
+											mistify_theme()->get( 'logo' )->render(
+												array(
+													'wrapper_class'        => 'wp-block wp-block-kubio-logo position-relative wp-block-kubio-logo__container  kubio-logo-direction-row mistify-header__k__mWDQCvYx59F-container mistify-local--container',
+													'logo_image_class'     => 'position-relative wp-block-kubio-logo__image  kubio-logo-image  mistify-header__k__mWDQCvYx59F-image mistify-local--image',
+													'alt_logo_image_class' => 'position-relative wp-block-kubio-logo__alternateImage kubio-logo-image kubio-alternate-logo-image   mistify-header__k__mWDQCvYx59F-alternateImage mistify-local--alternateImage',
+													'logo_text_class'      => 'position-relative wp-block-kubio-logo__text  mistify-header__k__mWDQCvYx59F-text mistify-local--text',
+												)
+											);
+											?>
 										</div>
 									</div>
 								</div>
@@ -62,7 +66,7 @@
 											<div class="background-layer background-layer-media-container"></div>
 										</div>
 										<div class="position-relative wp-block-kubio-column__align mistify-header__k__Xt2cBhFhs8f-align mistify-local-667-align h-y-container h-column__content h-column__v-align flex-basis-100 align-self-lg-center align-self-md-center align-self-center">
-											<?php mistify_theme_print_footer_copyright(true); ?>
+											<?php mistify_theme_print_footer_copyright( true ); ?>
 										</div>
 									</div>
 								</div>

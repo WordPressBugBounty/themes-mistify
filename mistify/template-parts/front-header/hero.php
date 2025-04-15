@@ -29,14 +29,14 @@
 				<div class="wp-block wp-block-kubio-column  position-relative wp-block-kubio-column__container mistify-front-header__k__9IGHpldIpw-container mistify-local-160-container d-flex h-col-lg-auto h-col-md-auto h-col-auto" data-kubio="kubio/column">
 					<div class="position-relative wp-block-kubio-column__inner mistify-front-header__k__9IGHpldIpw-inner mistify-local-160-inner d-flex h-flex-basis h-px-lg-3 v-inner-lg-3 h-px-md-3 v-inner-md-3 h-px-3 v-inner-3">
 						<div class="position-relative wp-block-kubio-column__align mistify-front-header__k__9IGHpldIpw-align mistify-local-160-align h-y-container h-column__content h-column__v-align flex-basis-100 align-self-lg-center align-self-md-center align-self-center">
-							<?php mistify_theme()->get('front-title')->render(); ?><?php mistify_theme()->get('front-subtitle')->render(); ?><?php mistify_theme()->get('buttons')->render(); ?>
+							<?php mistify_theme()->get( 'front-title' )->render(); ?><?php mistify_theme()->get( 'front-subtitle' )->render(); ?><?php mistify_theme()->get( 'buttons' )->render(); ?>
 						</div>
 					</div>
 				</div>
 				<div class="wp-block wp-block-kubio-column  position-relative wp-block-kubio-column__container mistify-front-header__k__cmq66JudoK-container mistify-local-169-container d-flex h-col-lg-auto h-col-md-auto h-col-auto" data-kubio="kubio/column">
 					<div class="position-relative wp-block-kubio-column__inner mistify-front-header__k__cmq66JudoK-inner mistify-local-169-inner d-flex h-flex-basis h-px-lg-3 v-inner-lg-3 h-px-md-3 v-inner-md-3 h-px-3 v-inner-3">
 						<div class="position-relative wp-block-kubio-column__align mistify-front-header__k__cmq66JudoK-align mistify-local-169-align h-y-container h-column__content h-column__v-align flex-basis-100 align-self-lg-center align-self-md-center align-self-center">
-							<?php mistify_theme()->get('front-image')->render(); ?>
+							<?php mistify_theme()->get( 'front-image' )->render(); ?>
 						</div>
 					</div>
 				</div>

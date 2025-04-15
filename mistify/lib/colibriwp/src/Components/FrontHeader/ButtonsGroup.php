@@ -18,22 +18,22 @@ class ButtonsGroup extends ComponentBase {
 	protected static function getOptions() {
 		$prefix = static::$settings_prefix;
 
-        $theme_action_button           = __( 'Get in Control', 'mistify' );
-        $theme_action_button_secondary = __( 'Contact us', 'mistify' );
-        $default_value = array(
-            array(
-                'label'       => sprintf( $theme_action_button, 1 ),
-                'url'         => '#',
-                'button_type' => '0',
-                'index'       => 0,
-            ),
-            array(
-                'label'       => sprintf( $theme_action_button_secondary, 1 ),
-                'url'         => '#',
-                'button_type' => '1',
-                'index'       => 1,
-            ),
-        );
+		$theme_action_button           = __( 'Get in Control', 'mistify' );
+		$theme_action_button_secondary = __( 'Contact us', 'mistify' );
+		$default_value                 = array(
+			array(
+				'label'       => sprintf( $theme_action_button, 1 ),
+				'url'         => '#',
+				'button_type' => '0',
+				'index'       => 0,
+			),
+			array(
+				'label'       => sprintf( $theme_action_button_secondary, 1 ),
+				'url'         => '#',
+				'button_type' => '1',
+				'index'       => 1,
+			),
+		);
 		return array(
 			'sections' => array(
 				"{$prefix}section" => array(

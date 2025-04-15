@@ -494,7 +494,7 @@ return array(
 						'link_value' => '#',
 						'index'      => 2,
 					),
-/*					array(
+				/*                  array(
 						'icon'       => $mistify_theme_svg_icons['vimeo'],
 						'link_value' => '#',
 						'index'      => 3,
@@ -672,7 +672,7 @@ return array(
 						'link_value' => '#',
 						'index'      => 2,
 					),
-/*					array(
+				/*                  array(
 						'icon'       => $mistify_theme_svg_icons['whatsapp-square'],
 						'link_value' => '#',
 						'index'      => 3,

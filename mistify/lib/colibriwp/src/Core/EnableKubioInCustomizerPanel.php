@@ -102,7 +102,7 @@ class EnableKubioInCustomizerPanel extends \WP_Customize_Panel {
 				cursor: default;
 				border: 1px solid #ddd !important;
 				box-shadow: none !important;
-				       padding: 12px 15px 15px;
+				 padding: 12px 15px 15px;
 			}
 
 			.kubio-customizer-panel .accordion-section-title:after {
@@ -136,7 +136,7 @@ class EnableKubioInCustomizerPanel extends \WP_Customize_Panel {
 	protected function render() {
 
 		$message = sprintf(
-			__( 'The Kubio plugin takes %1$s to a whole new level by adding new and powerful editing and styling options. Wanna have full control over your design with %1$s?', 'mistify' ),
+			__( 'To enable all the theme features, please install Kubio Page Builder plugin', 'mistify' ),
 			wp_get_theme( get_stylesheet() )->get( 'Name' )
 		);
 
@@ -145,7 +145,7 @@ class EnableKubioInCustomizerPanel extends \WP_Customize_Panel {
 		<?php if ( $this->getPluginState( $this->plugin_slug ) !== PluginsManager::ACTIVE_PLUGIN ) : ?>
 			<div class="accordion-section-title">
 				<p><?php echo esc_html( $message ); ?></p>
-				<?php if ( $this->getPluginState( $this->plugin_slug ) === PluginsManager::NOT_INSTALLED_PLUGIN ) : ?>
+			<?php if ( $this->getPluginState( $this->plugin_slug ) === PluginsManager::NOT_INSTALLED_PLUGIN ) : ?>
 				<button data-colibri-plugin-action="install" data-source="customizer-sidebar" class="button button-primary kubio-open-editor-panel-button ">
 					<span data-action="install"><?php esc_html_e( 'Install Kubio', 'mistify' ); ?></span>
 				</button>

@@ -28,7 +28,7 @@ class ArchiveLoop extends ComponentBase {
 		  else :
 			  $self = $this;
 			  /** ROW START */
-            View::printIn(
+			  View::printIn(
 				View::ROW_ELEMENT,
 				function () use ( $self ) {
 					/** COLUMN START */
@@ -48,7 +48,7 @@ class ArchiveLoop extends ComponentBase {
 				array(
 					'outer_class' => array( 'w-100' ),
 				)
-            );
+			  );
 
 		  endif;
 	}

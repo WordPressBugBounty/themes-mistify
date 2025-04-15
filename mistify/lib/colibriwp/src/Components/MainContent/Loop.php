@@ -26,13 +26,13 @@ class Loop extends ComponentBase {
 
 			endwhile;
 		  else :
-            View::partial(
+			  View::partial(
 				'main',
 				'404',
 				array(
 					'component' => $this,
 				)
-            );
+			  );
 		  endif;
 	}
 }

@@ -20,7 +20,7 @@
 							<div class="background-layer background-layer-media-container"></div>
 						</div>
 						<div class="position-relative wp-block-kubio-column__align mistify-header__k__yDjxQt01NT7-align mistify-local-636-align h-y-container h-column__content h-column__v-align flex-basis-100 align-self-lg-center align-self-md-center align-self-center">
-							<?php mistify_theme()->get('top-bar-list-icons')->render(); ?>
+							<?php mistify_theme()->get( 'top-bar-list-icons' )->render(); ?>
 						</div>
 					</div>
 				</div>
@@ -32,7 +32,7 @@
 							<div class="background-layer background-layer-media-container"></div>
 						</div>
 						<div class="position-relative wp-block-kubio-column__align mistify-header__k__wG2vdEvdZxJ-align mistify-local-644-align h-y-container h-column__content h-column__v-align flex-basis-100 align-self-lg-center align-self-md-center align-self-center">
-							<?php mistify_theme()->get('top-bar-social-icons')->render(); ?>
+							<?php mistify_theme()->get( 'top-bar-social-icons' )->render(); ?>
 						</div>
 					</div>
 				</div>

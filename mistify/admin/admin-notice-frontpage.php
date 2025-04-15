@@ -41,38 +41,39 @@ wp_localize_script(
 
 <div class="mistify-admin-big-notice--container">
 	<div class="logo-holder">
-        <h2><?php echo sprintf(__("Choose one of the %s predefined designs to start with:", 'mistify'), ucfirst(get_stylesheet())); ?></h2>
+		<h2><?php echo sprintf( __( 'Choose one of the %s predefined designs to start with:', 'mistify' ), ucfirst( get_stylesheet() ) ); ?></h2>
 	</div>
 	<div class="content-holder">
 		<ul class="predefined-front-pages">
 			<?php
-            $front_page_designs =  array(
-                array(
-                    'name'    => __( 'Modern', 'mistify' ),
-                    'index'   => 1,
-                    'preview' => 'front-page-1.jpg',
-                ),
+			$front_page_designs = array(
+				array(
+					'name'    => __( 'Modern', 'mistify' ),
+					'index'   => 1,
+					'preview' => 'front-page-1.jpg',
+				),
 
-                array(
-                    'name'    => __( 'Fullscreen', 'mistify' ),
-                    'index'   => 2,
-                    'preview' => 'front-page-2.jpg',
-                ),
+				array(
+					'name'    => __( 'Fullscreen', 'mistify' ),
+					'index'   => 2,
+					'preview' => 'front-page-2.jpg',
+				),
 
-                array(
-                    'name'    => __( 'Classic', 'mistify' ),
-                    'index'   => 3,
-                    'preview' => 'front-page-3.jpg',
-                ),
+				array(
+					'name'    => __( 'Classic', 'mistify' ),
+					'index'   => 3,
+					'preview' => 'front-page-3.jpg',
+				),
 
-                array(
-                    'name'    => __( '', 'mistify' ),
-                    'index'   => 4,
-                    'preview' => 'admin/ai-icon.svg',
-                ),
-            );
+				array(
+					'name'    => __( '', 'mistify' ),
+					'index'   => 4,
+					'preview' => 'admin/ai-icon.svg',
+				),
+			);
 
-            foreach ($front_page_designs as $mistify_design_index => $design ) : ?>
+			foreach ( $front_page_designs as $mistify_design_index => $design ) :
+				?>
 				<?php
 					$mistify_design_selected = $mistify_design_index === 0 ? 'selected' : '';
 					$preview_image_name      = isset( $design['preview'] ) ? $design['preview'] : "front-page-{$design['index']}.png";
@@ -80,31 +81,33 @@ wp_localize_script(
 				<li data-index="<?php echo esc_attr( $design['index'] ); ?>"
 					class="<?php echo $mistify_design_selected; ?>">
 
-                    <div class="predefined-front-page-card">
-                        <div class="selected-badge"></div>
+					<div class="predefined-front-page-card">
+						<div class="selected-badge"></div>
 
-                        <div class="predefined-front-page-card-header">
-                            <h3 class="design-title">
-			                    <?php echo esc_html( $design['name'] ); ?>
-                            </h3>
-                        </div>
+						<div class="predefined-front-page-card-header">
+							<h3 class="design-title">
+								<?php echo esc_html( $design['name'] ); ?>
+							</h3>
+						</div>
 						<div class="front-page-design-wrapper">
 							<div class="design-preview-image"
 								 style="background-image: url(<?php echo esc_attr( mistify_theme()->getAssetsManager()->getBaseURL() . "/images/{$preview_image_name}" ); ?>)"
 							></div>
 						</div>
 
-                        <?php
-                            if($design['name'] === ""){?>
-                                <div class="predefined-front-page-card-footer">
-                                    <h3 class="design-content">
-			                            <?php echo "Generate a tailored website in minutes using AI"; ?>
-                                    </h3>
-                                </div>
-                        <?php }
-                        ?>
+						<?php
+						if ( $design['name'] === '' ) {
+							?>
+								<div class="predefined-front-page-card-footer">
+									<h3 class="design-content">
+										<?php echo 'Generate a tailored website in minutes using AI'; ?>
+									</h3>
+								</div>
+							<?php
+						}
+						?>
 
-                    </div>
+					</div>
 				</li>
 			<?php endforeach; ?>
 		</ul>
